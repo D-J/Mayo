@@ -1,0 +1,59 @@
+/* $id$ */
+
+/**
+ * Basic Layout Styles
+ */
+#page-wrapper {
+  margin: 0px auto;
+  padding: 0px;
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+#page {
+  padding: 0px;
+}
+#main-wrapper {
+  width: 100%;
+  position: relative;
+}
+#main {
+}
+
+body {
+  min-width: 700px;
+}
+#content,
+#sidebar-first,
+#sidebar-second,
+#sidebar-first-r,
+#sidebar-second-r {
+  display: inline;
+  float: left;
+  position: relative;
+  overflow: hidden;
+}
+
+#sidebar-first .section {
+  padding-right: 10px;  /* gap between sidebar and main */
+}
+#sidebar-second .section {
+  padding-right: 10px;  /* gap between sidebar and main */
+}
+#sidebar-first-r .section {
+  padding-left: 10px;  /* gap between sidebar and main */
+}
+#sidebar-second-r .section {
+  padding-left: 10px;  /* gap between sidebar and main */
+}
+#footer-columns {
+  width: 100%;
+}
+#footer-column-wrapper {
+  float: left;
+}
+#footer-column {
+  padding: 10px;
+  margin: 0px 5px 5px 5px;
+  text-align: left;
+}
