@@ -17,8 +17,7 @@ body.overlay {
 }
 #main-menu-links li a.active,
 #main-menu-links li.active-trail a {
-  background-color: #fefefe;
-background-color: #ffffff;
+  background-color: #ffffff;
 }
 .tabs ul.secondary li a,
 .tabs ul.primary li a {
@@ -93,6 +92,9 @@ li a.active { /* important! */
 }
 .node-sticky {
   background-color: #f2f2f2;
+}
+.node .submitted {
+  color: #777777;
 }
 
 #menubar,
@@ -170,6 +172,7 @@ blockquote {
 }
 
 .comment {
+  background-color: #fefefe;
   border-color: #dedede;
 }
 .comment h3 {
@@ -177,6 +180,9 @@ blockquote {
 }
 .comment-unpublished {
   background-color: #fefefe;
+}
+.comment .submitted {
+  color: #777777;
 }
 
 table.views-view-grid tr {
@@ -209,6 +215,9 @@ fieldset {
 }
 tr.odd, tr.even {
   border-color: #d2d2d2;
+}
+.profile .user-picture {
+  background-color: #ffffff;
 }
 
 /*-------------- superfish color ---------------*/

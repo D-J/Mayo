@@ -168,7 +168,7 @@
 
       <?php if ($logo): ?>
         <div id="logo" style="<?php echo $logo_style; ?>">
-        <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
+        <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home">
           <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
         </a>
         </div> <!-- /#logo -->
@@ -238,7 +238,7 @@
     <?php } ?>
 
     <!-- space between menus and contents -->
-    <div id="spacer" class="clearfix"></div>
+    <div class="spacer clearfix"></div>
 
 
     <div id="main-wrapper">
@@ -248,7 +248,7 @@
 
       <?php if ($page['banner_top']) { ?>
       <div id="banner-top" class="banner clearfix"><?php print render($page['banner_top']); ?></div>
-      <div id="spacer" class="clearfix"></div>
+      <div class="spacer clearfix"></div>
       <?php } ?>
 
 
