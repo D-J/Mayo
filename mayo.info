@@ -11,14 +11,29 @@ regions[header] = Header
 regions[help] = Help
 regions[page_top] = Page top
 regions[page_bottom] = Page bottom
+
 regions[menubar] = Menu bar
 regions[submenubar] = Submenu bar
+
 regions[banner_top] = Banner top
+
+regions[top_column_first]  = Top first column
+regions[top_column_second] = Top second column
+regions[top_column_third]  = Top third column
+regions[top_column_fourth] = Top fourth column
+
 regions[highlighted] = Highlighted
 regions[content] = Content
 regions[sidebar_first] = Sidebar first
 regions[sidebar_second] = Sidebar second
+
+regions[bottom_column_first]  = Bottom first column
+regions[bottom_column_second] = Bottom second column
+regions[bottom_column_third]  = Bottom third column
+regions[bottom_column_fourth] = Bottom fourth column
+
 regions[banner_bottom] = Banner bottom
+
 regions[footer_column_first] = Footer first column
 regions[footer_column_second] = Footer second column
 regions[footer_column_third] = Footer third column

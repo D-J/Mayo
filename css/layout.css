@@ -34,18 +34,6 @@ body {
   overflow: hidden;
 }
 
-#sidebar-first .section {
-  padding-right: 10px;  /* gap between sidebar and main */
-}
-#sidebar-second .section {
-  padding-right: 10px;  /* gap between sidebar and main */
-}
-#sidebar-first-r .section {
-  padding-left: 10px;  /* gap between sidebar and main */
-}
-#sidebar-second-r .section {
-  padding-left: 10px;  /* gap between sidebar and main */
-}
 #footer-columns {
   width: 100%;
 }
@@ -57,3 +45,20 @@ body {
   margin: 0px 5px 5px 5px;
   text-align: left;
 }
+
+#top-columns,
+#bottom-columns {
+  width: 100%;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+.column-block-wrapper {
+  float: left;
+}
+.column-block {
+  padding: 10px;
+  margin: 0px 5px 5px 5px;
+  text-align: left;
+  margin: 0px;
+}
+

@@ -124,6 +124,9 @@ div#logo {
   font-size: 0.9em;
   font-weight: normal;
 }
+#footer-wrapper .column-block h2 {
+  font-size: 1.5em;
+}
 #footer .block {
   margin: 5px 0px;
 }
@@ -207,6 +210,19 @@ div#logo {
  */
 #highlighted .block {
   margin-bottom: 10px;
+}
+
+.column-block {
+  font-size: 0.9em;
+  margin: 0px;
+}
+.column-block h2 {
+  font-size: 1.25em;
+  line-height: 1em;
+  padding: 2px 0px;
+  margin: 0px 0px 3px 0px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
 }
 
 /**

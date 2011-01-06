@@ -52,6 +52,10 @@ MAYO supports the following regions.
 | +-------------------------------------+ |
 | |              Banner Top             | |
 | +-------------------------------------+ |
+| +-------------------------------------+ |
+| | Top      Top      Top      Top      | |
+| | Column1  Column2  Column3  Column4  | |
+| +-------------------------------------+ |
 | +---------+ +-------------------------+ |
 | | Sidebar | |       Highlighted       | |
 | |         | |                         | |
@@ -66,6 +70,10 @@ MAYO supports the following regions.
 |             |                         | |
 |             +-------------------------+ |
 | +-------------------------------------+ |
+| | Bottom   Bottom   Bottom   Bottom   | |
+| | Column1  Column2  Column3  Column4  | |
+| +-------------------------------------+ |
+| +-------------------------------------+ |
 | |            Banner Bottom            | |
 | +-------------------------------------+ |
 | +-------------------------------------+ |
@@ -78,8 +86,11 @@ MAYO supports the following regions.
 | +-------------------------------------+ |
 +-----------------------------------------+
 
-As you can see, it supports multiple columns in the footer region. You can add up to four columns. The width of a column is automatically calculated based on the number of columns to be used. For example, if you add blocks to column 1 thru 3, then the width of each column will be 33% of the footer width.
+As you can see, it supports multiple columns in the top, bottom and footer regions. You can add up to four columns. The width of a column is automatically calculated based on the number of columns to be used. For example, if you add 3 blocks to the footer, then the width of each column will be 33% of the footer width.
+Each block in the Top column blocks and bottom column blocks has its own box style just like sidebar blocks. Height of these blocks are equalized to the tallest blocks so that they looks nice and neat.
+
 Menu and Submenu regions are for those who uses superfish, nice_menus and other drop down menus (see the next section for more details).  Position of the sidebar first and the second can be configured.
+
 
 
 How to use superfish/nice_menus module?

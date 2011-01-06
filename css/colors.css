@@ -64,18 +64,22 @@ a:focus {
 a:active {
   color: #23aeff;
 }
-li a.active { /* important! */
+li a.active { 
+  /* important! */
   color: #3b3b3b;
 }
+.column-block,
 .sidebar .block {
   background-color: #ededed;
   border-color: #eeeeee;
   color: #5a5a5a;
 }
+.column-block h2,
 .sidebar h2 {
   border-bottom-color: #bbbbbb;
   color: #5a5a5a;
 }
+.column-block a,
 .sidebar a {
   color: #9fb800;
 }
@@ -141,6 +145,17 @@ div.item-list ul.pager li a:hover,
   color: #cccccc;
 }
 #footer-wrapper a {
+  color: #84a202;
+}
+#footer-wrapper .column-block {
+  background-color: #555555;
+  color: #cccccc;
+}
+#footer-wrapper .column-block h2 {
+  border: none;
+  color: #cccccc;
+}
+#footer-wrapper .column-block a {
   color: #84a202;
 }
 #footer {

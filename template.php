@@ -7,6 +7,114 @@
  */
 
 /**
+ * Construst HTML code for the top/bottom block columns
+ */
+function mayo_build_columns($columns) {
+  $styles = array();
+  $num_columns = 0;
+  $first = -1;
+
+  for ($i = 0 ; $i < 4 ; $i++) {
+    if ($columns[$i]) {
+      if ($first == -1) $first = $i;
+      $last = $i;
+      $num_columns++;
+    }
+  }
+  if (!$num_columns) return '';
+
+  $out = '';
+  $out .= '<div class="column-blocks clearfix">';
+
+  $column_width = round(100 / $num_columns, 2) . '%';  // calculate percent width of a column
+
+  for ($i = 0 ; $i < 4 ; $i++) {
+    if ($columns[$i]) {
+      if ($i == $first) {
+        $margin_left_style = 'margin-left: 0px;';
+      }
+      else {
+        $margin_left_style = 'margin-left: 5px;';
+      }
+      if ($i == $last) {
+        $margin_right_style = 'margin-right: 0px;';
+      }
+      else {
+        $margin_right_style = 'margin-right: 5px;';
+      }
+      $style = $margin_left_style . $margin_right_style;
+
+      $out .= '<div class="column-block-wrapper" style="width: ' . $column_width . ';">';
+      $out .= '<div class="column-block" style="' . $style . '">';
+      $out .= render($columns[$i]);
+      $out .= '</div></div> <!--/.column-block --><!--/.column-block-wrapper-->';
+    }
+  }
+  $out .= '</div> <!--/.column-blocks-->';
+  return $out;
+}
+
+/**
+ * Calculate margins of contents and sidebars based on the layout style
+ */
+function mayo_get_margins($content, $sb_first, $sb_second) {
+  $sb_layout_style = theme_get_setting('sidebar_layout_style');
+
+  $c_margin_l =  $sf_margin_l =  $ss_margin_l = 5;
+  $c_margin_r =  $sf_margin_r =  $ss_margin_r = 5;
+
+  switch($sb_layout_style) {
+    case 1:
+      if ($sb_first) {
+        $sf_margin_l = 0;
+      }
+      else {
+        $c_margin_l = 0;
+      }
+      if ($sb_second) {
+        $ss_margin_r = 0;
+      }
+      else {
+        $c_margin_r = 0;
+      }
+      break;
+    case 2: // both sidebars come left
+      if ($sb_first) {
+        $sf_margin_l = 0;
+      }
+      else if ($sb_second) {
+        $ss_margin_l = 0;
+      }
+      else {
+        $c_margin_l = 0;
+      }
+      $c_margin_r = 0;
+      break;
+    case 3: // both sidebars come right
+      if ($sb_second) {
+        $ss_margin_r = 0;
+      }
+      else if ($sb_first) {
+        $sf_margin_r = 0;
+      }
+      else {
+        $c_margin_r = 0;
+      }
+      $c_margin_l = 0;
+      break;
+  }
+  $c_margin_style = 'margin-left: ' . $c_margin_l . 'px; margin-right: ' . $c_margin_r . 'px;';
+  $sf_margin_style = 'margin-left: ' . $sf_margin_l . 'px; margin-right: ' . $sf_margin_r . 'px;';
+  $ss_margin_style = 'margin-left: ' . $ss_margin_l . 'px; margin-right: ' . $ss_margin_r . 'px;';
+
+  return array(
+    'content' => $c_margin_style,
+    'sb_first' => $sf_margin_style,
+    'sb_second' => $ss_margin_style,
+  );
+}
+
+/**
  * Return a themed breadcrumb links
  *
  * @param $breadcrumb

@@ -154,8 +154,23 @@
   }
   $content_style = 'width: ' . $content_width . '%;';
 
+  $margins = mayo_get_margins($page['content'], $page['sidebar_first'], $page['sidebar_second']);
+  $content_section_style = $margins['content'];
+  $sb_first_section_style = $margins['sb_first'];
+  $sb_second_section_style = $margins['sb_second'];
+
   if (theme_get_setting('header_fontsizer')) {
-    drupal_add_js(drupal_get_path('theme', 'mayo') . '/js/mayo.js');
+    drupal_add_js(drupal_get_path('theme', 'mayo') . '/js/mayo-fontsize.js');
+  }
+  if ($page['top_column_first'] ||
+      $page['top_column_second'] ||
+      $page['top_column_third'] ||
+      $page['top_column_fourth'] ||
+      $page['bottom_column_first'] ||
+      $page['bottom_column_second'] ||
+      $page['bottom_column_third'] ||
+      $page['bottom_column_fourth']) {
+    drupal_add_js(drupal_get_path('theme', 'mayo') . '/js/mayo-columns.js');
   }
 ?>
 
@@ -252,21 +267,37 @@
       <?php } ?>
 
 
-      <!-- sidebars -->
-      <?php if (($page['sidebar_first']) && ($sb_layout_style == 1 || $sb_layout_style == 2)): ?>
-        <div id="sidebar-first" class="column sidebar" style="<?php echo $sb_first_style; ?>"><div class="section">
+      <div id="top-wrapper">
+        <div id="top-columns" class="clearfix">
+        <?php print mayo_build_columns( array(
+            $page['top_column_first'],
+            $page['top_column_second'],
+            $page['top_column_third'],
+            $page['top_column_fourth'],
+          ));
+        ?>
+        </div> <!--/#top-columns -->
+      </div> <!-- /#top-wrapper -->
+
+
+      <div class="clearfix"></div>
+
+
+      <!-- sidebars (left) -->
+      <?php if (($page['sidebar_first']) && ($sb_layout_style != 3)){ ?>
+        <div id="sidebar-first" class="column sidebar" style="<?php echo $sb_first_style; ?>"><div class="section" style="<?php echo $sb_first_section_style; ?>">
           <?php print render($page['sidebar_first']); ?>
         </div></div> <!-- /.section, /#sidebar-first -->
-      <?php endif; ?>
-      <?php if (($page['sidebar_second']) && ($sb_layout_style == 2)): ?>
-        <div id="sidebar-second" class="column sidebar" style="<?php echo $sb_second_style; ?>"><div class="section">
+      <?php } ?>
+      <?php if (($page['sidebar_second']) && ($sb_layout_style == 2)) { ?>
+        <div id="sidebar-second" class="column sidebar" style="<?php echo $sb_second_style; ?>"><div class="section" style="<?php echo $sb_second_section_style; ?>">
           <?php print render($page['sidebar_second']); ?>
         </div></div> <!-- /.section, /#sidebar-second -->
-      <?php endif; ?>
+      <?php } ?>
 
 
       <!-- main content -->
-      <div id="content" class="column" style="<?php echo $content_style; ?>"><div class="section">
+      <div id="content" class="column" style="<?php echo $content_style; ?>"><div class="section" style="<?php echo $content_section_style; ?>">
 
         <?php if ($page['highlighted']) { ?>
           <div id="highlighted"><?php print render($page['highlighted']); ?></div>
@@ -289,17 +320,33 @@
       </div></div> <!-- /.section, /#content -->
 
 
-      <!-- sidebars -->
-      <?php if (($page['sidebar_first']) && ($sb_layout_style == 3)): ?>
-        <div id="sidebar-first-r" class="column sidebar" style="<?php echo $sb_first_style; ?>"><div class="section">
+      <!-- sidebars (right) -->
+      <?php if (($page['sidebar_first']) && ($sb_layout_style == 3)) { ?>
+        <div id="sidebar-first-r" class="column sidebar" style="<?php echo $sb_first_style; ?>"><div class="section" style="<?php echo $sb_first_section_style; ?>">
           <?php print render($page['sidebar_first']); ?>
         </div></div> <!-- /.section, /#sidebar-first -->
-      <?php endif; ?>
-      <?php if (($page['sidebar_second']) && ($sb_layout_style == 1 || $sb_layout_style == 3)): ?>
-        <div id="sidebar-second-r" class="column sidebar" style="<?php echo $sb_second_style; ?>"><div class="section">
+      <?php } ?>
+      <?php if (($page['sidebar_second']) && ($sb_layout_style != 2)) { ?>
+        <div id="sidebar-second-r" class="column sidebar" style="<?php echo $sb_second_style; ?>"><div class="section" style="<?php echo $sb_second_section_style; ?>">
           <?php print render($page['sidebar_second']); ?>
         </div></div> <!-- /.section, /#sidebar-second -->
-      <?php endif; ?>
+      <?php } ?>
+
+
+      <div class="clearfix"></div>
+
+
+      <div id="bottom-wrapper">
+        <div id="bottom-columns" class="clearfix">
+        <?php print mayo_build_columns( array(
+            $page['bottom_column_first'],
+            $page['bottom_column_second'],
+            $page['bottom_column_third'],
+            $page['bottom_column_fourth'],
+          ));
+        ?>
+        </div> <!--/#bottom-columns -->
+      </div> <!-- /#bottom-wrapper -->
 
 
       <div class="clearfix"></div>
@@ -316,32 +363,18 @@
     <!-- space between contents and footer -->
     <div id="spacer" class="clearfix"></div>
 
+
     <div id="footer-wrapper">
-      
-      <?php 
-        $num_columns = 0;
-        if ($page['footer_column_first']) $num_columns++;
-        if ($page['footer_column_second']) $num_columns++;
-        if ($page['footer_column_third']) $num_columns++;
-        if ($page['footer_column_fourth']) $num_columns++;
-        if ($num_columns) {
-          $column_width = intval(100 / $num_columns) . '%';  // calculate percent width of a column
-      ?>
+
       <div id="footer-columns" class="clearfix">
-        <div id="footer-column-wrapper" style="width: <?php echo $column_width; ?>"><div id="footer-column">
-        <?php print render($page['footer_column_first']); ?>
-		</div></div>
-        <div id="footer-column-wrapper" style="width: <?php echo $column_width; ?>"><div id="footer-column">
-        <?php print render($page['footer_column_second']); ?>
-		</div></div>
-        <div id="footer-column-wrapper" style="width: <?php echo $column_width; ?>"><div id="footer-column">
-        <?php print render($page['footer_column_third']); ?>
-		</div></div>
-        <div id="footer-column-wrapper" style="width: <?php echo $column_width; ?>"><div id="footer-column">
-        <?php print render($page['footer_column_fourth']); ?>
-		</div></div>
-      </div> <!-- /#footer-columns -->
-      <?php } ?>
+      <?php print mayo_build_columns( array(
+          $page['footer_column_first'],
+          $page['footer_column_second'],
+          $page['footer_column_third'],
+          $page['footer_column_fourth'],
+        ));
+      ?>
+      </div> <!--/#footer-columns -->
 
       <?php if ($page['footer']) { ?>
       <div id="footer"><div class="section">
@@ -350,6 +383,7 @@
       <?php } ?>
 
     </div> <!-- /#footer-wrapper -->
+
 
   </div> <!-- /#page -->
 </div> <!-- /#page-wrapper -->
