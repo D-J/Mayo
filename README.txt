@@ -38,8 +38,8 @@ Superfish module <http://drupal.org/project/superfish>
 Nice Menus module <http://drupal.org/project/nice_menus>
 
 
-Additional regions
-===================
+Regions
+=========
 
 MAYO supports the following regions.
 
@@ -87,10 +87,9 @@ MAYO supports the following regions.
 +-----------------------------------------+
 
 As you can see, it supports multiple columns in the top, bottom and footer regions. You can add up to four columns. The width of a column is automatically calculated based on the number of columns to be used. For example, if you add 3 blocks to the footer, then the width of each column will be 33% of the footer width.
-Each block in the Top column blocks and bottom column blocks has its own box style just like sidebar blocks. Height of these blocks are equalized to the tallest blocks so that they looks nice and neat.
+Each block in the top and bottom columns regions has its own box style just like sidebar blocks. Height of these blocks are equalized to the tallest blocks within the same region so that they looks nice and neat.
 
-Menu and Submenu regions are for those who uses superfish, nice_menus and other drop down menus (see the next section for more details).  Position of the sidebar first and the second can be configured.
-
+Menu and Submenu regions are for those who uses superfish, nice_menus and other drop down menus (see the next section for more details).  Position of the sidebar first and the second can be configured from the theme settings page.
 
 
 How to use superfish/nice_menus module?

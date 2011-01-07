@@ -111,8 +111,10 @@
 
   $header_watermark_style = '';
   $header_watermark = theme_get_setting('header_watermark');
-  $header_watermark_style = 'background-image: url(/' . drupal_get_path('theme', 'mayo') . '/images/pat-' . $header_watermark . '.png);';
-
+  if($header_watermark) {
+    $header_watermark_style = 'background-image: url(/' . drupal_get_path('theme', 'mayo') . '/images/pat-' . $header_watermark . '.png);';
+  }
+  
   $logo_style = '';
   $logo_left_margin = theme_get_setting('logo_left_margin');
   if (empty($logo_left_margin)) $logo_left_margin = '0px';

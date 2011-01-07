@@ -83,8 +83,9 @@ li a.active {
 .sidebar a {
   color: #9fb800;
 }
-.sidebar .block table tr td {
-  background-color: #ededed;
+.column-block table tr th,
+.sidebar .block table tr th {
+  border-right-color: #ededed;
 }
 
 .node {
@@ -135,11 +136,6 @@ div.item-list ul.pager li a:hover,
 #content .node-sticky h2 { /* main content: block title */
   background-color: transparent;
 }
-
-#content td {
-  background-color: #fefefe;
-}
-
 #footer-wrapper {
   background-color: #555555;
   color: #cccccc;
@@ -202,34 +198,30 @@ blockquote {
 
 table.views-view-grid tr {
   background-color: #ffffff;
-  border-color: #d2d2d2;
 }
 
 td.views-field {
   background-color: #ffffff;
-  border-color: #d2d2d2;
 }
 
 table tr th {
-  background-color: #e7e7e7;
-  border-color: #d2d2d2;
-}
-table tr td,
-td {
-  background-color: #fefefe;
-  border-color: #d2d2d2;
-}
-td.active {
-  background-color: #ffffff;
-}
-table.Array tr {
-  border-bottom-color: #d2d2d2;
+  background-color: #dadada;
+  border-right-color: #ffffff;
 }
 fieldset {
-  border-color: #d2d2d2;
+  border-color: #dcdcdc; /* nodedivider color */
 }
-tr.odd, tr.even {
-  border-color: #d2d2d2;
+tr.even,
+tr.even td {
+  background-color: #f0f0f0;
+}
+tr.odd,
+tr.odd td {
+  background-color: #fefefe;
+}
+tr.even td.active,
+tr.odd td.active {
+  background-image: url('../images/dark.png');
 }
 .profile .user-picture {
   background-color: #ffffff;

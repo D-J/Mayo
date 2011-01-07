@@ -124,6 +124,10 @@ div#logo {
   font-size: 0.9em;
   font-weight: normal;
 }
+#footer-wrapper .column-block {
+  border-style: solid;
+  border-width: 0px;
+}
 #footer-wrapper .column-block h2 {
   font-size: 1.5em;
 }
@@ -215,6 +219,8 @@ div#logo {
 .column-block {
   font-size: 0.9em;
   margin: 0px;
+  border-style: solid;
+  border-width: 1px;
 }
 .column-block h2 {
   font-size: 1.25em;
@@ -253,12 +259,19 @@ div#logo {
   padding: 5px;
   overflow: hidden;
 }
-.sidebar .block table {
-  border: none;
-}
+
+.column-block table tr th,
+.column-block table tr td,
+.sidebar .block table tr th,
 .sidebar .block table tr td {
   border: none;
-  padding: 2px;
+  padding: 3px 4px;
+}
+.column-block table tr th,
+.sidebar .block table tr th {
+  border-style: solid;
+  border-width: 0px;
+  border-right-width: 1px;
 }
 
 .sidebar .block ul {
@@ -588,7 +601,6 @@ table.views-view-grid tr td {
   font-size: 0.8em;
   overflow: hidden;
   margin-bottom: 0.5em;
-  float: left;
 }
 .field-type-taxonomy-term-reference .field-label {
   float: left;
@@ -606,16 +618,21 @@ table.views-view-grid tr td {
   clear: left; /* do not use 'both' */
 }
 
-table tr td {
-  padding: 2px 3px;
+table tr {
   border-style: solid;
-  border-width: 1px;
+  border-width: 0px;
+}
+table tr td {
+  padding: 4px 6px;
+  border-style: solid;
+  border-width: 0px;
 }
 table tr th {
   border-style: solid;
-  border-width: 1px;
-  padding: 4px;
+  padding: 4px 6px;
   font-size: 0.9em;
+  border-width: 0px;
+  border-right-width: 1px;
 }
 table thead * {
   padding: 2px 3px;
@@ -624,12 +641,19 @@ table thead * {
 }
 table tbody {
   border-width: 0px;
-
 }
 table.sticky-enabled tr td {
   padding: 2px 3px;
   border-style: solid;
-  border-width: 1px;
+  border-width: 0px;
+}
+tr.even td.active,
+tr.odd td.active {
+  background-image: url('../images/dark.png');
+}
+tr.even,
+tr.odd {
+  border-width: 0px;
 }
 
 .field-label-inline .field-label {

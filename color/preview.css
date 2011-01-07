@@ -196,3 +196,13 @@
   font-weight: normal;
   text-decoration: none;
 }
+#preview table,
+#preview table tr,
+#preview table tr td {
+  border-width: 0px;
+}
+#preview table tr th {
+  border-width: 0px;
+  border-right-width: 1px;
+  font-weight: bold;
+}

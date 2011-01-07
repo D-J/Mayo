@@ -51,6 +51,8 @@
 
       // Generic text and link 
       $('#preview', form).css('color', $('#palette input[name="palette[text]"]', form).val());
+      $('#preview table tr td', form).css('color', $('#palette input[name="palette[text]"]', form).val());
+      $('#preview table tr th', form).css('color', $('#palette input[name="palette[text]"]', form).val());
       $('#preview a', form).css('color', $('#palette input[name="palette[link]"]', form).val());
 
 
@@ -87,11 +89,9 @@
 
       // Table background
       $('#preview table tr th', form).css('background-color', $('#palette input[name="palette[tableheader]"]', form).val());
-      $('#preview table tr td', form).css('background-color', $('#palette input[name="palette[node]"]', form).val());
-
-      // Table border
-      $('#preview table tr td, #preview table tr th', form).css('border-color', $('#palette input[name="palette[tableborders]"]', form).val());
-
+      $('#preview table tr.even td', form).css('background-color', $('#palette input[name="palette[even]"]', form).val());
+      $('#preview table tr.odd td', form).css('background-color', $('#palette input[name="palette[node]"]', form).val());
+      $('#preview table tr th', form).css('border-color', $('#palette input[name="palette[node]"]', form).val());
 
       // Sidebar background.
       $('#preview .sidebar .block', form).css('background-color', $('#palette input[name="palette[sidebar]"]', form).val());
