@@ -49,7 +49,6 @@ body {
 #top-columns,
 #bottom-columns {
   width: 100%;
-  margin-bottom: 10px;
   overflow: hidden;
 }
 .column-block-wrapper {

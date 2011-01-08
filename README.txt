@@ -92,6 +92,11 @@ Each block in the top and bottom columns regions has its own box style just like
 Menu and Submenu regions are for those who uses superfish, nice_menus and other drop down menus (see the next section for more details).  Position of the sidebar first and the second can be configured from the theme settings page.
 
 
+Mininum width
+==============
+Currently, the theme uses 700px as the minimum-width. If you want to change it, please manually edit the css/layout.css and change the min-width of the body.
+
+
 How to use superfish/nice_menus module?
 =======================================
 The primary menu and secondary menu does not support superfish and nice_menus. If you want to use one of them, you need to turn off the primary and secondary menu from the theme settings page first. Then, create and configure menu blocks and then assign them to either the 'menubar' or 'sub-menubar' region of the MAYO theme at admin/structure/block page.
@@ -112,6 +117,11 @@ If the header background image you choose is not wide enough, the image repeats,
 Round corners for sidebar block and node
 ========================================
 By using CSS3 and browser specific stylesheet properties, round corners for sidebar blocks and node are supported by major browsers such as Fireforx, Safari, Google Chrome and Opera except for IE. We have decided not to support round corners for IE with Javascript since may slows down the page display. So if you are IE users, please wait for the future version of IE that supports CSS3's border-radius property.
+
+
+Changing default color set
+===========================
+Please do not change the default color set (MAYO) in the color/color.inc file.  You can change other entries but not the default one. Otherwise, it will mess up the entire color changing scheme.
 
 
 

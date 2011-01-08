@@ -51,6 +51,7 @@ function mayo_build_columns($columns) {
     }
   }
   $out .= '</div> <!--/.column-blocks-->';
+  $out .= '<div class="spacer clearfix"></div>';
   return $out;
 }
 

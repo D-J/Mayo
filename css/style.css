@@ -246,6 +246,7 @@ div#logo {
   border-style: solid;
   border-width: 1px;
 }
+.column-block h2,
 .sidebar h2 {
   background: transparent;
   line-height: 1em;
@@ -255,23 +256,27 @@ div#logo {
   padding: 2px 0px;
   font-size: 1.25em;
 }
+.column-block .content,
 .sidebar .block .content {
-  padding: 5px;
+  padding: 5px 2px;
   overflow: hidden;
 }
 
 .column-block table tr th,
-.column-block table tr td,
-.sidebar .block table tr th,
-.sidebar .block table tr td {
-  border: none;
-  padding: 3px 4px;
-}
-.column-block table tr th,
 .sidebar .block table tr th {
   border-style: solid;
   border-width: 0px;
-  border-right-width: 1px;
+  padding: 0px 4px;
+  background: none;
+  border-bottom-width: 3px;
+}
+.column-block table tr td,
+.sidebar .block table tr td {
+  padding: 2px 4px;
+  border-style: solid;
+  border-width: 0px;
+  border-bottom-width: 1px;
+  background: none;
 }
 
 .sidebar .block ul {
@@ -630,7 +635,6 @@ table tr td {
 table tr th {
   border-style: solid;
   padding: 4px 6px;
-  font-size: 0.9em;
   border-width: 0px;
   border-right-width: 1px;
 }
