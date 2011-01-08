@@ -18,6 +18,12 @@
       // Apply sidebar layout style
       if (Drupal.settings.color.sb_layout_style == 3) { // right sidebar
         $('#preview .sidebar', form).css('float', 'right');
+        if (Drupal.settings.color.layout_style == 2) {
+          $('#preview .sidebar', form).css('margin-right', '20px');
+        }
+        else {
+          $('#preview .sidebar', form).css('margin-right', '0px');
+        }
         $('#preview #preview-content', form).css('margin-left', '0px');
         $('#preview #preview-content', form).css('margin-right', '10px');
       }
