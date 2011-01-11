@@ -62,6 +62,7 @@ settings[sitename_top_margin] = 15px
 settings[sitename_left_margin] = 20px
 settings[searchbox_top_margin] = 20px
 settings[searchbox_right_margin] = 15px
+settings[searchbox_size] = 24
 settings[header_bg_file] = ''
 settings[header_bg_alignment] = 'top left'
 settings[header_watermark] = 0

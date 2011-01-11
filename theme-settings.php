@@ -258,6 +258,14 @@ function mayo_form_system_theme_settings_alter(&$form, &$form_state) {
     '#maxlength' => 8,
     '#description' => t('Specify the right margin of the search form in px. This setting is used only when the header search form option is enabled.'),
   );
+  $form['adv_header']['searchbox_size'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Search form textfield width'),
+    '#default_value' => theme_get_setting('searchbox_size'),
+    '#size' => 10,
+    '#maxlength' => 6,
+    '#description' => t('Specify the width of the text field of the search forms in characters. This size is also applied for the search form in a block. NOTE: do not add px since this is not px size.'),
+  );
   $form['adv_header']['header_bg_file'] = array(
     '#type' => 'textfield',
     '#title' => t('URL of the header background image'),

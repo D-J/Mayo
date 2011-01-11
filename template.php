@@ -154,7 +154,7 @@ function mayo_preprocess_search_block_form(&$variables) {
   unset($variables['form']['actions']['#children']);
 
   $variables['form']['search_block_form']['#value'] = $prompt;
-  $variables['form']['search_block_form']['#size'] = 28;
+  $variables['form']['search_block_form']['#size'] = theme_get_setting('searchbox_size');
   $variables['form']['search_block_form']['#attributes'] = array(
     'onblur'  => "if (this.value == '') { this.value = '$prompt'; }",
     'onfocus' => "if (this.value == '$prompt') { this.value = ''; }" );
