@@ -502,7 +502,6 @@ div.tabs ul.secondary li {
   /*outline: none; */  /* remove blue outline for Safari */
 }
 .form-item-search-block-form .form-text {
-  width: 200px;
   height: 24px;
   color: #555555;
   margin: 0px;
@@ -510,8 +509,9 @@ div.tabs ul.secondary li {
   border-bottom-color: #ddd;
   border-right-color: #ddd;
   margin-top: 1px;
-  background: #fff url(../images/search.png) no-repeat center right;
+  background: #fff url(../images/search.png) no-repeat 2px center;
   padding: 0px 4px 0px 4px;
+  padding-left: 24px; /* space for magnifying glass */
 }
 #header .form-item-search-block-form {
   float: right;

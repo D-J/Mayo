@@ -246,11 +246,21 @@ function mayo_preprocess_html(&$variables) {
   $base_font_size = theme_get_setting('base_font_size');
   $style = 'font-size: ' . $base_font_size . '; ';
   $base_font_family = theme_get_setting('base_font_family');
-  $style .= $font_family[$base_font_family];
+  if ($base_font_family == 2) { // Custom
+    $style .= 'font-family: ' . theme_get_setting('base_custom_font_family') . ';';
+  }
+  else {
+    $style .= $font_family[$base_font_family];
+  }
   drupal_add_css("body {" . $style . "}", $options);
 
   $heading_font_family = theme_get_setting('heading_font_family');
-  $style = $font_family[$heading_font_family];
+  if ($heading_font_family == 2) { // Custom
+    $style .= 'font-family: ' . theme_get_setting('heading_custom_font_family') . ';';
+  }
+  else {
+    $style = $font_family[$heading_font_family];
+  }
   drupal_add_css("h1,h2,h3,h4,h5 {" . $style . "}", $options);
 
   if ($heading_font_family == 1) {

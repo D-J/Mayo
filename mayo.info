@@ -44,7 +44,9 @@ settings[shortcut_module_link] = 0
 
 settings[base_font_size] = 87.5%
 settings[base_font_family] = 0
+settings[base_custom_font_family] = 'Helvetica, Arial, sans-serif'
 settings[heading_font_family] = 0
+settings[heading_custom_font_family] = 'Helvetica, Arial, sans-serif'
 
 settings[base_vmargin] = 14px
 settings[page_width] = 90%

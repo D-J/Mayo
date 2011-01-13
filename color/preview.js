@@ -145,7 +145,7 @@
           $('#preview #preview-header', form).css('border-width', Drupal.settings.color.header_border_width);
         }
       }
-      if (Drupal.settings.color.header_watermark) {
+      if (Drupal.settings.color.header_watermark > 0) {
         var url = '/sites/all/themes/mayo/images/pat-' + Drupal.settings.color.header_watermark + '.png';
         $('#preview #preview-header-watermark', form).attr('style', 'background-image: url(' + url + ');');
       }

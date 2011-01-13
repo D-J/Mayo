@@ -8,6 +8,8 @@
  */
 function mayo_form_system_theme_settings_alter(&$form, &$form_state) {
 
+  drupal_add_js(drupal_get_path('theme', 'mayo') . '/js/mayo.js');
+
   /*--------------- Font settings --------------*/
   $form['font'] = array(
     '#type' => 'fieldset',
@@ -36,8 +38,18 @@ function mayo_form_system_theme_settings_alter(&$form, &$form_state) {
     '#options' => array(
       0 => t('Serif: Georgia, Palatino Linotype, Book Antiqua, URW Palladio L, Baskerville, serif'),
       1 => t('Sans-Serif: Verdana, Geneva, Arial, Bitstream Vera Sans, DejaVu Sans, sans-serif'),
+      2 => t('Custom'),
     ),
     '#description' => t('Font used for most part of the contents.'),
+  );
+  $form['font']['base_custom_font_family'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Custom base font family'),
+    '#default_value' => theme_get_setting('base_custom_font_family'),
+    '#size' => 80,
+    '#description' => t('Enter the base font-family you want to use. No need to start with <b>font-family:</b> and end with <b>;</b>. Just enter comma separated font names.'),
+    '#prefix' => '<div id="base-custom-font-family-wrapper">',
+    '#suffix' => '</div>',
   );
   $form['font']['heading_font_family'] = array(
     '#type' => 'select',
@@ -46,8 +58,18 @@ function mayo_form_system_theme_settings_alter(&$form, &$form_state) {
     '#options' => array(
       0 => t('Serif: Georgia, Palatino Linotype, Book Antiqua, URW Palladio L, Baskerville, serif'),
       1 => t('Sans-Serif: Verdana, Geneva, Arial, Bitstream Vera Sans, DejaVu Sans, sans-serif'),
+      2 => t('Custom'),
     ),
     '#description' => t('Font used for the headings (h1, h2, h3, h4, h5). Font used for the site name and slogan can not be changed here. If you want to change it, please manually edit style.css in the theme\'s css subdirectory.'),
+  );
+  $form['font']['heading_custom_font_family'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Custom heading font family'),
+    '#default_value' => theme_get_setting('heading_custom_font_family'),
+    '#size' => 80,
+    '#description' => t('Enter the font-family you want to use for the headings. No need to start with <b>font-family:</b> and end with <b>;</b>. Just enter comma separated font names.'),
+    '#prefix' => '<div id="heading-custom-font-family-wrapper">',
+    '#suffix' => '</div>',
   );
 
   /*--------------- Layout settings --------------*/
