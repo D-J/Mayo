@@ -1,4 +1,3 @@
-/* $Id$ */
 /**
  * @file
  * Equolize the column height in a specified group

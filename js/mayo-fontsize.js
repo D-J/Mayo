@@ -1,4 +1,3 @@
-/* $Id$ */
 /**
  * @file
  * Adds javascript functions for font resizing

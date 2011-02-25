@@ -1,4 +1,3 @@
-// $Id$
 /**
  * @file
  * Provides the administration JavaScript for the Mayo theme settings page

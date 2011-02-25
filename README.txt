@@ -1,4 +1,3 @@
-$Id$
 
 MAYO - original theme for Drupal 7 from PIXTURE STUDIO
 
