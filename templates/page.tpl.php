@@ -212,7 +212,7 @@
 
       <?php if ((theme_get_setting('header_searchbox')) && function_exists('search_box')) { ?>
         <div id="header-searchbox" style="<?php echo $searchbox_style; ?>">
-        <?php print render(drupal_get_form('search_block_form')); ?>
+      <?php  $output_form = drupal_get_form('search_block_form'); print render($output_form); ?>
         </div>
       <?php } ?>
 
