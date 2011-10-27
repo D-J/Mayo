@@ -12,7 +12,7 @@ body.overlay {
   color: #3b3b3b;
 }
 #page { /* bg */
-  background-color: #fef8dd; 
+  background-color: #fef8dd;
 }
 #main-menu-links li a.active,
 #main-menu-links li.active-trail a {
@@ -63,7 +63,7 @@ a:focus {
 a:active {
   color: #638400;
 }
-li a.active { 
+li a.active {
   /* important! */
   color: #3b3b3b;
 }

@@ -1,7 +1,7 @@
 
 MAYO - original theme for Drupal 7 from PIXTURE STUDIO
 
-The name "MAYO" is taken from a phrase "MAke Your Own" and "MAYOnnaise" which I love :-). As the name describes itself, MAYO is developed to be a theme that provides users easy ways to customize and create a theme they like. 
+The name "MAYO" is taken from a phrase "MAke Your Own" and "MAYOnnaise" which I love :-). As the name describes itself, MAYO is developed to be a theme that provides users easy ways to customize and create a theme they like.
 
 MAYO is developed based on the experience of developing PIXTURE theme. However, MAYO fully takes advantage of Drupal 7's color module and advaced theme settings.  MAYO is simple but flexible. You can customize the look of the MAYO easily from the theme setting page. It does not require you to have the knowledge of CSS, HTML and PHP.
 
@@ -29,7 +29,7 @@ MAYO's theme settings page provides many options you can select/customize.  Belo
 
 9 You can add font resizing control to the header (default is OFF)
 
-The template files it uses are page.tpl.php and comment.tpl.php only (+ maintenance_page.tpl.php for maintenance mode). For all other elements, the standard template files that comes with Drupal Core will be used. 
+The template files it uses are page.tpl.php and comment.tpl.php only (+ maintenance_page.tpl.php for maintenance mode). For all other elements, the standard template files that comes with Drupal Core will be used.
 
 In addition to the customization features listed above, it supports following drop down menu modules.
 
@@ -109,7 +109,7 @@ One of the characteristics of the MAYO theme is that it supports both light colo
 
 Header backgroud image
 ======================
-If you use liquid theme, you should be aware that the header area width expands as the browser's window size is widen. 
+If you use liquid theme, you should be aware that the header area width expands as the browser's window size is widen.
 If the header background image you choose is not wide enough, the image repeats, which may make the header area a bit ugly. We recommend that you prepare and use the header image at least 1600px wide for the liquid layout.  Of course, this is not an issue for fixed layout.
 
 
@@ -126,6 +126,6 @@ Please do not change the default color set (MAYO) in the color/color.inc file.  
 
 Author
 =======
-Hideki Ito 
+Hideki Ito
 PIXTURE STUDIO <http://www.pixture.com>
 

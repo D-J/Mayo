@@ -7,7 +7,7 @@
 
       // Move the color wheel downwards
       $('#placeholder', form).css('margin-top', '1000px'); // adjusted based on Seven theme
-      
+
       // Apply layout style
       if (Drupal.settings.color.layout_style == 2) {
         // No page margin to header and footer
@@ -54,7 +54,7 @@
       $('#preview-page', form).css('background-color', $('#palette input[name="palette[bg]"]', form).val());
 
 
-      // Generic text and link 
+      // Generic text and link
       $('#preview', form).css('color', $('#palette input[name="palette[text]"]', form).val());
       $('#preview table tr td', form).css('color', $('#palette input[name="palette[text]"]', form).val());
       $('#preview table tr th', form).css('color', $('#palette input[name="palette[text]"]', form).val());

@@ -21,11 +21,11 @@ function mayo_form_system_theme_settings_alter(&$form, &$form_state) {
     '#title' => t('Base font size'),
     '#default_value' => theme_get_setting('base_font_size'),
     '#options' => array(
-      '75%'    => '75% (=12px)', 
-      '81.25%' => '81.25% (=13px)', 
-      '87.5%'  => '87.5% (=14px)', 
-      '93.75%' => '93.75% (=15px)', 
-      '100%'   => '100% (=16px)', 
+      '75%'    => '75% (=12px)',
+      '81.25%' => '81.25% (=13px)',
+      '87.5%'  => '87.5% (=14px)',
+      '93.75%' => '93.75% (=15px)',
+      '100%'   => '100% (=16px)',
       '112.5%' => '112.5% (=18px)'
     ),
     '#description' => t('To support text size enlargement/reduction, percent ratio based on the browser\'s regular font size (which is mostly 16px) is used.'),
@@ -387,7 +387,7 @@ function mayo_header_bg_validate($element, &$form_state) {
 function mayo_page_width_validate($element, &$form_state) {
   if (!empty($element['#value'])) {
     $width = $element['#value'];
- 
+
     // check if it is liquid (%) or fixed width (px)
     if(preg_match("/(\d+)\s*%/", $width, $match)) {
       $num = intval($match[0]);
@@ -416,7 +416,7 @@ function mayo_page_width_validate($element, &$form_state) {
 function mayo_sidebar_width_validate($element, &$form_state) {
   if (!empty($element['#value'])) {
     $width = $element['#value'];
- 
+
     // check if it is liquid (%) or fixed width (px)
     if(preg_match("/(\d+)\s*%/", $width, $match)) {
       $num = intval($match[0]);

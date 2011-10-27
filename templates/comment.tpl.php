@@ -55,7 +55,7 @@
  * @see theme_comment()
  */
 ?>
-<?php 
+<?php
   $spam = 0;
   if (function_exists('antispam_content_is_spam')) {
     if (antispam_content_is_spam('comment', $comment->cid)) {
