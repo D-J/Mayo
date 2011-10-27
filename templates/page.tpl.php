@@ -84,7 +84,7 @@
   $page_margin = theme_get_setting('page_margin');
   if (empty($page_margin)) $page_margin = '0px';
   if (arg(0) == "admin") $page_margin = '20px'; // admin page
-  if ($layout_style == 1) { 
+  if ($layout_style == 1) {
     $page_style = 'padding: ' . $page_margin . ';';
   }
   else {
@@ -93,15 +93,15 @@
 
   $header_style = '';
   $header_height = theme_get_setting('header_height');
-  if (!empty($header_height)) $header_style .= 'height: ' . $header_height . ';'; 
+  if (!empty($header_height)) $header_style .= 'height: ' . $header_height . ';';
   $header_bg_file = theme_get_setting('header_bg_file');
   if ($header_bg_file) {
-    $header_style .= 'background: url(' . $header_bg_file . ') repeat ';
+    $header_style .= 'filter:;background: url(' . $header_bg_file . ') repeat ';
     $header_style .= theme_get_setting('header_bg_alignment') . ';';
   }
   if ($layout_style == 2 || $header_bg_file) {
     // no header margin, so skip header borders to make it nicer
-    $header_style .= 'border: none;'; 
+    $header_style .= 'border: none;';
   }
   else {
     $header_border_width = theme_get_setting('header_border_width');
@@ -113,7 +113,7 @@
   if($header_watermark) {
     $header_watermark_style = 'background-image: url(/' . drupal_get_path('theme', 'mayo') . '/images/pat-' . $header_watermark . '.png);';
   }
-  
+
   $logo_style = '';
   $logo_left_margin = theme_get_setting('logo_left_margin');
   if (empty($logo_left_margin)) $logo_left_margin = '0px';

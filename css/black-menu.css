@@ -70,9 +70,9 @@
   z-index: 99; /* makes drop down menu item for the menubar comes front of sub menubar */
   background: url('../images/black-menu.png') repeat center left;
 }
-#menubar .nice-menu a, 
-#menubar .nice-menu a:active, 
-#menubar .nice-menu a:visited, 
+#menubar .nice-menu a,
+#menubar .nice-menu a:active,
+#menubar .nice-menu a:visited,
 #menubar .nice-menu a:focus {
   color: #ddd;
 }

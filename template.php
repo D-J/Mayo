@@ -138,7 +138,7 @@ function mayo_breadcrumb($variables) {
   }
   return '';
 }
-    
+
 /**
  * Custom search block form
  *  No 'submit button'

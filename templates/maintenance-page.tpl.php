@@ -82,11 +82,11 @@
             <?php print $messages; ?>
           </div></div> <!-- /.section, /#messages -->
         <?php } ?>
-      
+
       </div></div> <!-- /.section, /#content -->
 
       <div class="clearfix"></div>
-      
+
     </div> <!-- /#main -->
 
 

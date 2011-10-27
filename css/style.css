@@ -1,6 +1,6 @@
 
 * {
-  margin: 0; 
+  margin: 0;
   padding: 0;
 }
 body {
@@ -9,14 +9,14 @@ body {
   font-size: 87.5%; /* = 14px assuming browser's regular font size is 16px */
 }
 ul {
-  margin: 0; 
-  padding: 0; 
+  margin: 0;
+  padding: 0;
   list-style-type: disc;
   margin-left: 10px;
 }
 ol {
-  margin: 0; 
-  padding: 0; 
+  margin: 0;
+  padding: 0;
   margin-left: 10px;
 }
 a {
@@ -30,7 +30,7 @@ em {
 }
 /* p,a,strong,em,li,dl,dt { */
 p,li,dl,dt {
-  margin: 6px 0; 
+  margin: 6px 0;
   line-height: 1.5em;
 }
 dd {
@@ -75,7 +75,7 @@ fieldset {
  */
 #header {
   padding: 0px;
-  display: block; 
+  display: block;
   border-style: solid;
   border-width: 1px;
   overflow: hidden;
@@ -87,7 +87,7 @@ fieldset {
   background-image: none;
   background-repeat: no-repeat;
   background-position: top center;
-}   
+}
 div#logo {
   float: left;
 }
@@ -98,7 +98,7 @@ div#logo {
 #header h1 a,
 #header h1 a:link,
 #header h1 a:visited {
-  font-weight: 800; 
+  font-weight: 800;
   text-decoration: none;
   line-height: 1em;
   font-size: 34px; /* we do not want it changed by text scaling */
@@ -115,9 +115,9 @@ div#logo {
  * Footer
  */
 #footer-wrapper {
-  text-align: center; 
-  clear: both; 
-  display: block; 
+  text-align: center;
+  clear: both;
+  display: block;
   margin: 0px;
   padding: 10px;
   font-size: 0.9em;
@@ -209,7 +209,7 @@ div#logo {
 }
 
 /**
- * Highlighted 
+ * Highlighted
  */
 #highlighted .block {
   margin-bottom: 10px;
@@ -522,7 +522,7 @@ div.tabs ul.secondary li {
 }
 
 /**
- * Form 
+ * Form
  */
 .pushbutton, button, .form-submit {
   margin: 2px;
@@ -549,7 +549,7 @@ div.tabs ul.secondary li {
   padding: 0px;
   border-width: 0px;
   line-height: 1.2em;
- 
+
 }
 .decreaseFont {
   padding-right: 22px;
@@ -705,11 +705,11 @@ blockquote {
 }
 .sf-menu li:hover ul,
 .sf-menu li.sfHover ul {
-  top: 1.8em; 
+  top: 1.8em;
 }
 .sf-sub-indicator {
   background: url('../images/sf-arrows.png') no-repeat -10px -110px;
-} 
+}
 .sf-menu ul {
   -khtml-border-radius: 0px;  /* for old Safari, KHTML */
   -moz-border-radius: 0px;    /* for Firefox */
@@ -770,7 +770,7 @@ ul.nice-menu li.menuparent a {
   /* root menu item that has drop down menu */
   background-image: url('../images/arrow-down.png');
   background-repeat: no-repeat;
-  background-position: 90%;
+  background-position: 98%;
   /* background-color is set by colors.css */
 }
 ul.nice-menu li a {

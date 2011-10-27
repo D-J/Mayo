@@ -12,7 +12,7 @@ jQuery(document).ready(function() {
     mayoColumnsAdjustHeight();
     return false;
   });
-    
+
   // Increase font size
   jQuery(".increaseFont").click(function() {
     var currentFontSize = jQuery('body').css('font-size');
