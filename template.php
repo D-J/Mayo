@@ -50,7 +50,7 @@ function mayo_build_columns($columns) {
     }
   }
   $out .= '</div> <!--/.column-blocks-->';
-  $out .= '<div class="spacer clearfix"></div>';
+  $out .= '<div class="spacer clearfix cfie"></div>';
   return $out;
 }
 
@@ -195,7 +195,8 @@ function mayo_preprocess_maintenance_page(&$variables) {
 function mayo_preprocess_html(&$variables) {
 
   // Add conditional stylesheet for IE
-  drupal_add_css(path_to_theme() . '/css/ie.css', array('group' => CSS_THEME, 'browsers' => array('IE' => 'lte IE 8', '!IE' => FALSE), 'preprocess' => FALSE));
+  drupal_add_css(path_to_theme() . '/css/ie8.css', array('group' => CSS_THEME, 'browsers' => array('IE' => 'IE 8', '!IE' => FALSE), 'preprocess' => FALSE));
+  drupal_add_css(path_to_theme() . '/css/ie.css', array('group' => CSS_THEME, 'browsers' => array('IE' => ' IE 7', '!IE' => FALSE), 'preprocess' => FALSE));
   drupal_add_css(path_to_theme() . '/css/ie6.css', array('group' => CSS_THEME, 'browsers' => array('IE' => 'IE 6', '!IE' => FALSE), 'preprocess' => FALSE));
 
   $options = array(

@@ -224,7 +224,7 @@
         </div>
       <?php } ?>
 
-      <div class="clearfix"></div>
+      <div class="clearfix cfie"></div>
 
       <?php print render($page['header']); ?>
 
@@ -239,7 +239,7 @@
       </div></div> <!-- /.section, /#navigation -->
     <?php } ?>
 
-    <div class="clearfix"></div>
+    <div class="clearfix cfie"></div>
 
     <!-- for nice_menus, superfish -->
     <?php if ($page['menubar']) { ?>
@@ -254,7 +254,7 @@
     <?php } ?>
 
     <!-- space between menus and contents -->
-    <div class="spacer clearfix"></div>
+    <div class="spacer clearfix cfie"></div>
 
 
     <div id="main-wrapper">
@@ -264,10 +264,11 @@
 
       <?php if ($page['banner_top']) { ?>
       <div id="banner-top" class="banner clearfix"><?php print render($page['banner_top']); ?></div>
-      <div class="spacer clearfix"></div>
+      <div class="spacer clearfix cfie"></div>
       <?php } ?>
 
-
+      <?php if ($page['top_column_first'] | $page['top_column_second'] |
+              $page['top_column_third'] | $page['top_column_fourth']) { ?>
       <div id="top-wrapper">
         <div id="top-columns" class="clearfix">
         <?php print mayo_build_columns( array(
@@ -279,9 +280,9 @@
         ?>
         </div> <!--/#top-columns -->
       </div> <!-- /#top-wrapper -->
+      <?php } ?>
 
-
-      <div class="clearfix"></div>
+      <div class="clearfix cfie"></div>
 
 
       <!-- sidebars (left) -->
@@ -334,9 +335,10 @@
       <?php } ?>
 
 
-      <div class="clearfix"></div>
+      <div class="clearfix cfie"></div>
 
-
+      <?php if ($page['bottom_column_first'] | $page['bottom_column_second'] |
+              $page['bottom_column_third'] | $page['bottom_column_fourth']) { ?>
       <div id="bottom-wrapper">
         <div id="bottom-columns" class="clearfix">
         <?php print mayo_build_columns( array(
@@ -348,13 +350,13 @@
         ?>
         </div> <!--/#bottom-columns -->
       </div> <!-- /#bottom-wrapper -->
+      <?php } ?>
 
-
-      <div class="clearfix"></div>
+      <div class="clearfix cfie"></div>
 
 
       <?php if ($page['banner_bottom']) { ?>
-      <div id="spacer" class="clearfix"></div>
+      <div id="spacer" class="clearfix cfie"></div>
       <div id="banner-bottom" class="banner clearfix"><?php print render($page['banner_bottom']); ?></div>
       <?php } ?>
 
@@ -362,11 +364,11 @@
     </div> <!-- /#main-wrapper -->
 
     <!-- space between contents and footer -->
-    <div id="spacer" class="clearfix"></div>
-
+    <div id="spacer" class="clearfix cfie"></div>
 
     <div id="footer-wrapper">
-
+      <?php if ($page['footer_column_first'] | $page['footer_column_second'] |
+              $page['footer_column_third'] | $page['footer_column_fourth']) { ?>
       <div id="footer-columns" class="clearfix">
       <?php print mayo_build_columns( array(
           $page['footer_column_first'],
@@ -376,6 +378,7 @@
         ));
       ?>
       </div> <!--/#footer-columns -->
+      <?php } ?>
 
       <?php if ($page['footer']) { ?>
       <div id="footer"><div class="section">

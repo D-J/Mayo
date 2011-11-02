@@ -1,3 +1,16 @@
+/**
+ * IE7 had empty clearfix spacer divs causing white space issues.
+ * Added class .cfie (clearfix ie).
+ */
+
+* {
+  margin: -1px;
+}
+
+div.clearfix.cfie {
+  height: 2px;
+  visibility: hidden;
+}
 
 /* IE7 renders legends in nested fieldsets without a width. */
 fieldset legend {
@@ -21,4 +34,3 @@ kbd {
   padding-top: 4px;
   height: 20px;
 }
-
