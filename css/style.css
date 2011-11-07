@@ -258,7 +258,7 @@ div#logo {
 .column-block .content,
 .sidebar .block .content {
   padding: 5px 2px;
-  overflow: hidden;
+  /*overflow: hidden; Removed for Superfish */
 }
 
 .column-block table tr th,
@@ -690,14 +690,14 @@ blockquote {
 .sf-menu li.last ul li a,
 .sf-menu li ul li a,
 .sf-menu li ul li.last a {
-  /* all other chile menu items */
+  /* all other child menu items */
   border-style: solid;
   border-width: 1px;
   /* border-color is set by colors.css */
 }
 .sf-menu li.menuparent a {
   /* item with child menu - adding some spaces for arrows */
-  padding: 2px 19px 2px 8px;
+  padding: 8px 19px 2px 8px;  /* Added 6px at top for alignment*/
 }
 .sf-menu li a.sfHover,
 .sf-menu li a:hover {
@@ -705,10 +705,13 @@ blockquote {
 }
 .sf-menu li:hover ul,
 .sf-menu li.sfHover ul {
-  top: 1.8em;
+  top: 2.8em;  /* Added 1.0em to bring down child items */
 }
 .sf-sub-indicator {
   background: url('../images/sf-arrows.png') no-repeat -10px -110px;
+}
+a > .sf-sub-indicator {
+  top: 1em; /* .2em drop in arrows */
 }
 .sf-menu ul {
   -khtml-border-radius: 0px;  /* for old Safari, KHTML */

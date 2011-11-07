@@ -30,7 +30,7 @@ body {
   display: inline;
   float: left;
   position: relative;
-  overflow: hidden;
+  /*overflow: hidden; Removed for Superfish */
 }
 
 #footer-columns {

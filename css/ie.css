@@ -34,3 +34,13 @@ kbd {
   padding-top: 4px;
   height: 20px;
 }
+
+/**
+ * For sidebar-first Superfish menues to make them visible over content area in IE7.
+ */
+#sidebar-first {
+  z-index: 2;
+}
+#content {
+  z-index: 1;
+}
