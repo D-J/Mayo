@@ -602,7 +602,6 @@ table.views-view-grid tr td {
   margin-left: 10px;
 }
 .field-type-taxonomy-term-reference {
-  font-size: 0.8em;
   overflow: hidden;
   margin-bottom: 0.5em;
 }
@@ -657,10 +656,6 @@ tr.odd td.active {
 tr.even,
 tr.odd {
   border-width: 0px;
-}
-
-.field-label-inline .field-label {
-  width: 64px;
 }
 blockquote {
   padding: 0px 10px;
