@@ -618,7 +618,7 @@ table.views-view-grid tr td {
   padding: 0px;
 }
 .field-type-text-with-summary {
-  clear: left; /* do not use 'both' */
+  /*clear: left;*/ /* do not use 'both' */
 }
 
 table tr {
