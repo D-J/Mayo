@@ -231,53 +231,53 @@ function mayo_form_system_theme_settings_alter(&$form, &$form_state) {
     '#maxlength' => 8,
     '#description' => t('Specify the header border width in px. Note that header border is not drawn when you use header background image or when you use layout style 2.'),
   );
-  $form['adv_header']['logo_left_margin'] = array(
+  $form['adv_header']['logo_left_padding'] = array(
     '#type' => 'textfield',
-    '#title' => t('Logo left margin'),
-    '#default_value' => theme_get_setting('logo_left_margin'),
+    '#title' => t('Logo left padding'),
+    '#default_value' => theme_get_setting('logo_left_padding'),
     '#size' => 12,
     '#maxlength' => 8,
-    '#description' => t('Specify the left margin of the logo in px. This setting is used only when the logo option is enabled.'),
+    '#description' => t('Specify the left padding of the logo in px. This setting is used only when the logo option is enabled.'),
   );
-  $form['adv_header']['logo_top_margin'] = array(
+  $form['adv_header']['logo_top_padding'] = array(
     '#type' => 'textfield',
-    '#title' => t('Logo top margin'),
-    '#default_value' => theme_get_setting('logo_top_margin'),
+    '#title' => t('Logo top padding'),
+    '#default_value' => theme_get_setting('logo_top_padding'),
     '#size' => 12,
     '#maxlength' => 8,
-    '#description' => t('Specify the top margin of the logo in px. This setting is used only when the logo option is enabled.'),
+    '#description' => t('Specify the top padding of the logo in px. This setting is used only when the logo option is enabled.'),
   );
-  $form['adv_header']['sitename_left_margin'] = array(
+  $form['adv_header']['sitename_left_padding'] = array(
     '#type' => 'textfield',
-    '#title' => t('Site name left margin'),
-    '#default_value' => theme_get_setting('sitename_left_margin'),
+    '#title' => t('Site name left padding'),
+    '#default_value' => theme_get_setting('sitename_left_padding'),
     '#size' => 12,
     '#maxlength' => 8,
-    '#description' => t('Specify the left margin of the site name in px. This setting is used only when the sitename option is enabled.'),
+    '#description' => t('Specify the left padding of the site name in px. This setting is used only when the sitename option is enabled.'),
   );
-  $form['adv_header']['sitename_top_margin'] = array(
+  $form['adv_header']['sitename_top_padding'] = array(
     '#type' => 'textfield',
-    '#title' => t('Site name top margin'),
-    '#default_value' => theme_get_setting('sitename_top_margin'),
+    '#title' => t('Site name top padding'),
+    '#default_value' => theme_get_setting('sitename_top_padding'),
     '#size' => 12,
     '#maxlength' => 8,
-    '#description' => t('Specify the top margin of the site name in px. This setting is used only when the sitename option is enabled.'),
+    '#description' => t('Specify the top padding of the site name in px. This setting is used only when the sitename option is enabled.'),
   );
-  $form['adv_header']['searchbox_right_margin'] = array(
+  $form['adv_header']['searchbox_right_padding'] = array(
     '#type' => 'textfield',
-    '#title' => t('Search form right margin'),
-    '#default_value' => theme_get_setting('searchbox_right_margin'),
+    '#title' => t('Search form right padding'),
+    '#default_value' => theme_get_setting('searchbox_right_padding'),
     '#size' => 12,
     '#maxlength' => 8,
-    '#description' => t('Specify the right margin of the search form in px. This setting is used only when the header search form option is enabled.'),
+    '#description' => t('Specify the right padding of the search form in px. This setting is used only when the header search form option is enabled.'),
   );
-  $form['adv_header']['searchbox_top_margin'] = array(
+  $form['adv_header']['searchbox_top_padding'] = array(
     '#type' => 'textfield',
-    '#title' => t('Search form top margin'),
-    '#default_value' => theme_get_setting('searchbox_top_margin'),
+    '#title' => t('Search form top padding'),
+    '#default_value' => theme_get_setting('searchbox_top_padding'),
     '#size' => 12,
     '#maxlength' => 8,
-    '#description' => t('Specify the right margin of the search form in px. This setting is used only when the header search form option is enabled.'),
+    '#description' => t('Specify the right padding of the search form in px. This setting is used only when the header search form option is enabled.'),
   );
   $form['adv_header']['searchbox_size'] = array(
     '#type' => 'textfield',
