@@ -296,6 +296,7 @@ div#logo {
 }
 .sidebar .block .language-switcher-locale-url {
   margin: 0 0 0 10px;
+  padding-left: 10px;
 }
 
 /**
