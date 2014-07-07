@@ -294,6 +294,9 @@ div#logo {
   padding-left: 10px;
   padding-bottom: 5px;
 }
+.sidebar .block .language-switcher-locale-url {
+  margin: 0 0 0 10px;
+}
 
 /**
  * Page
